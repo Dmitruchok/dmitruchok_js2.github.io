@@ -1,46 +1,26 @@
-var generatioElenent = {
-    addElement : function ( element ) {
-      var el = document.createElement( element );
-      return el;
-    },
+var arrName = [];
 
-    addClassname : function ( element, className ) {
-      element.classList.add(className);
-    },
-
-    addBlock : function ( someBlock, nameElement ) {
-      var nameBlock = document.querySelector( someBlock );
-      nameBlock.appendChild( nameElement );
-    },
-
-    addContent : function (element, content) {
-      element.innerHTML = content;
-    }
+var i = 0;
+while (i < 5) {
+  var writeName=prompt('Введите имя:');
+  console.log('i =', i);
+  i++;
+  var pushed = arrName.push(writeName);
 }
 
-var headBlock = generatioElenent.addElement( 'div' );
-var nameDIV = generatioElenent.addClassname( headBlock, 'header');
-var headBlockposition = generatioElenent.addBlock( 'body', headBlock );
+console.log(arrName);
 
-var headText = generatioElenent.addElement( 'h3');
-var headTextposition = generatioElenent.addBlock( '.header', headText );
-var contentH3 = generatioElenent.addContent( headText, 'Тест по програмированию' )
+var writeNameuser=prompt( 'Введите имя пользователя:' );
 
+console.log(writeNameuser);
 
+for (var i = 0; i < arrName.length; i++) {
 
+  console.log('arrName[i]', arrName[i]);
 
-
-
-/*var body = document.querySelector('body');
-body.appendChild(header);
-
-var headElement = document.createElement('div');
-headElement.classList.add('header')
-var body = document.querySelector('body');
-body.appendChild(headElement);
-
-var element = document.createElement('h3');
-element.innerHTML = 'Тест по програмированию';
-body.appendChild(element);
-var header =  document.querySelector('.header');
-header.appendChild(element);*/
+  if ( writeNameuser === arrName[i] ) {
+    alert('Андрей, Вы успешно вошли))');
+  } else {
+    alert('Неверное Имя пользователя');
+  }
+}
