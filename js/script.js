@@ -10,17 +10,17 @@ while (i < 5) {
 
 console.log(arrName);
 
-var writeNameuser=prompt( 'Введите имя пользователя:' );
+var writeNameuser = prompt( 'Введите имя пользователя:' );
 
 console.log(writeNameuser);
 
-for (var i = 0; i < arrName.length; i++) {
+for (var j = 0; j < arrName.length; j++) {
+  console.log('arrName[i]', arrName[j]);
 
-  console.log('arrName[i]', arrName[i]);
-
-  if ( writeNameuser === arrName[i] ) {
-    alert('Андрей, Вы успешно вошли))');
-  } else {
-    alert('Неверное Имя пользователя');
-  }
+if ( writeNameuser === arrName[j] ) {
+  alert('Андрей, Вы успешно вошли))');
+  break;
+} else {
+  alert('Неверное Имя пользователя');
+}
 }
