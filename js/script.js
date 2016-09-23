@@ -13,8 +13,9 @@ console.log(arrName);
 var writeNameuser = prompt( 'Введите имя пользователя:' );
 
 console.log(writeNameuser);
-if (!writeNameuser) {
-  alert('Прервать верификацию');
+
+if ( !writeNameuser ) {
+  alert( 'Прервать верификацию' );
 }
   else if (writeNameuser === arrName[0]) {
   alert('Андрей, Вы успешно вошли))');
@@ -31,12 +32,11 @@ if (!writeNameuser) {
 }
 
 /*for (var j = 0; j < arrName.length; j++) {
-  console.log('arrName[i]', arrName[j]);
 
-if ( writeNameuser === arrName[j] ) {
-  alert('Андрей, Вы успешно вошли))');
-  break;
-} else {
-  alert('Неверное Имя пользователя');
-}
+  console.log('arrName[j]', arrName[j]);
+  if ( arrName[j] === writeNameuser) {
+    alert('Андрей, Вы успешно вошли))');
+  } else {
+    alert('Неверное Имя пользователя');
+  }
 }*/
