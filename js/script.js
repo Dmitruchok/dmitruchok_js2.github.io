@@ -18,8 +18,4 @@ for (var j = 0; j < arrName.length; j++) {
 }
 console.log(resultUserLog);
 
-if ( resultUserLog === true) {
-  alert('Андрей, Вы успешно вошли))');
-} else {
-  alert('Неверное Имя пользователя');
-};
+resultUserLog === true ? alert('Андрей, Вы успешно вошли))') : alert('Неверное Имя пользователя');
