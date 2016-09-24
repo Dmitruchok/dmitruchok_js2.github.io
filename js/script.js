@@ -5,38 +5,21 @@ while (i < 5) {
   var writeName=prompt('Введите имя:');
   console.log('i =', i);
   i++;
-  var pushed = arrName.push(writeName);
+  arrName.push(writeName);
 }
-
-console.log(arrName);
 
 var writeNameuser = prompt( 'Введите имя пользователя:' );
+var resultUserLog = false;
 
-console.log(writeNameuser);
-
-if ( !writeNameuser ) {
-  alert( 'Прервать верификацию' );
+for (var j = 0; j < arrName.length; j++) {
+  if (writeNameuser === arrName[j]) {
+    resultUserLog = true;
+  }
 }
-  else if (writeNameuser === arrName[0]) {
-  alert('Андрей, Вы успешно вошли))');
-} else if (writeNameuser === arrName[1]) {
-  alert('Андрей, Вы успешно вошли))');
-} else if (writeNameuser === arrName[2]) {
-  alert('Андрей, Вы успешно вошли))');
-} else if (writeNameuser === arrName[3]) {
-  alert('Андрей, Вы успешно вошли))');
-} else if (writeNameuser === arrName[3]) {
+console.log(resultUserLog);
+
+if ( resultUserLog === true) {
   alert('Андрей, Вы успешно вошли))');
 } else {
   alert('Неверное Имя пользователя');
-}
-
-/*for (var j = 0; j < arrName.length; j++) {
-
-  console.log('arrName[j]', arrName[j]);
-  if ( arrName[j] === writeNameuser) {
-    alert('Андрей, Вы успешно вошли))');
-  } else {
-    alert('Неверное Имя пользователя');
-  }
-}*/
+};
