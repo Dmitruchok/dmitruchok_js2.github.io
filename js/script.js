@@ -8,16 +8,14 @@ while ( i < 5 ) {
 }
 
 var writeNameuser = prompt( 'Введите имя пользователя:' );
-var resultUserLog;
+var resultUserLog = false;
 
 for ( var j = 0; j < arrName.length; j++ ) {
 
   if ( writeNameuser == arrName[j] ) {
     resultUserLog = true;
     break;
-  } else {
-    resultUserLog = false;
   }
 }
 
-resultUserLog === true ? alert( 'Андрей, Вы успешно вошли))' ) : alert( 'Неверное Имя пользователя' );
+resultUserLog ? alert( writeNameuser + ' , вы успешно вошли))' ) : alert( 'Неверное Имя пользователя' );
